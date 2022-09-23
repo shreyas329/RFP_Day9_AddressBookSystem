@@ -12,7 +12,7 @@ public class AddressBook {
 
         while (true) {
 
-            System.out.println("\n Enter your choice: \n" + "1. Add person     \n" + "2. Display list \n"+ "0. EXIT    \n");
+            System.out.println("\n Enter your choice: \n" + "1. Add person     \n" + "2. Edit detail \n"+ "3. Display list \n"+"0. EXIT    \n");
             int choice = scanner.nextInt();
 
             switch (choice) {
@@ -21,6 +21,9 @@ public class AddressBook {
                     break;
 
                 case 2:
+                	operation.editPerson();
+                	break;
+                case 3:
                     operation.displayPerson();
                     break;
 
