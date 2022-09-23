@@ -57,4 +57,17 @@ public class DetailsAddressBook {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	 @Override
+	    public String toString() {
+	        return "DetailsAddressBook{" +
+	                "firstName='" + firstName + '\'' +
+	                ", lastName='" + lastName + '\'' +
+	                ", address='" + address + '\'' +
+	                ", city='" + city + '\'' +
+	                ", state='" + state + '\'' +
+	                ", phoneNumber=" + phoneNumber +
+	                ", zip=" + zip +
+	                ", email='" + email + '\'' +
+	                '}';
+	    }
 }

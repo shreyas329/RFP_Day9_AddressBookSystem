@@ -7,33 +7,27 @@ public class AddressBook {
 	public static void main(String[] args) {
         System.out.println("Welcome To Address Book System");
         DetailsAddressBook details = new DetailsAddressBook();
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        Operation operation = new Operation();
 
-        System.out.println("Enter the following address details ");
-        System.out.println("Enter the First Name :");
-        details.setFirstName(input.next());
+        while (true) {
 
-        System.out.println("Enter the last name:");
-        details.setLastName(input.next());
+            System.out.println("\n Enter your choice: \n" + "1. Add person     \n" + "2. Display list \n"+ "0. EXIT    \n");
+            int choice = scanner.nextInt();
 
-        System.out.println("Enter your email address:");
-        details.setEmail(input.next());
+            switch (choice) {
+                case 1:
+                    operation.addPerson();
+                    break;
 
-        System.out.println("Enter your address:");
-        input.nextLine();
-        details.setAddress(input.nextLine());
+                case 2:
+                    operation.displayPerson();
+                    break;
 
-        System.out.println("Enter your city name:");
-        details.setCity(input.next());
-
-        System.out.println("Enter your state:");
-        details.setState(input.next());
-
-        System.out.println("Enter your pin code:");
-        details.setZip(input.nextLong());
-
-        System.out.println("Enter your phone number:");
-        details.setPhoneNumber(input.nextLong());
-        
+                default:
+                    System.exit(0);
+                    break;
+            }
+        }
 	}
 }
